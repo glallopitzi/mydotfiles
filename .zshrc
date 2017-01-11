@@ -10,6 +10,10 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
@@ -45,12 +49,14 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git common-aliases sublime)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/scala/bin:/opt/activator-latest:/opt/apache-nutch/bin/"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home
 
 source $ZSH/oh-my-zsh.sh
 
@@ -76,25 +82,17 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vi ~/.zshrc"
+alias freediskspace="df -P -kHl"
+alias show_pem_files="find ~ -name \"*.pem\""
+alias connect_aws_gianc="ssh -i ~/Documents/aws/first.pem ec2-user@ec2-54-171-116-172.eu-west-1.compute.amazonaws.com"
 
-alias kenny='ssh glallopizzi@kenny'
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home
-export CLASSPATH=/Users/gianc/tmp/postgresql.jar:.
+# Add DeakerK bash aliases.
+if [ -f ~/.gianc_bash_aliases ]; then
+    source ~/.gianc_bash_aliases
+fi
 
-export SCALA_HOME=/opt/scala
-export PATH=$PATH:$SCALA_HOME/bin
-export PATH=$PATH:/opt/activator-latest
-
-export NUTCH_HOME=/opt/apache-nutch
-export PATH=$PATH:/opt/apache-nutch/bin/
-export PATH=$PATH:/usr/local/bin/scrapy
-export PATH=$PATH:/System/Library/Frameworks/Python.framework/Versions/Current/
-
-PERL_MB_OPT="--install_base \"/Users/gianc/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/gianc/perl5"; export PERL_MM_OPT;
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/gianc/.sdkman"

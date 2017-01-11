@@ -1,0 +1,77 @@
+Host *
+UseKeychain yes
+
+Host drivek1
+User drivek
+Port 33633
+HostName drivek1.drivek.it
+IdentityFile ~/.ssh/id_rsa
+ServerAliveInterval 240
+
+Host drivek2
+User drivek
+Port 33633
+HostName drivek2.drivek.it
+IdentityFile ~/.ssh/id_rsa
+ServerAliveInterval 240
+
+Host drivek5
+User drivek
+Port 33633
+HostName drivek5.drivek.it
+IdentityFile ~/.ssh/id_rsa
+ServerAliveInterval 240
+
+Host drivek6
+User drivek
+Port 33633
+HostName drivek6.drivek.it
+IdentityFile ~/.ssh/id_rsa
+ServerAliveInterval 240
+
+
+Host drivek3
+User drivek
+Port 33633
+HostName drivek3.drivek.it
+IdentityFile ~/.ssh/id_rsa
+ServerAliveInterval 240
+
+Host drivek4
+User drivek
+Port 33633
+HostName drivek4.drivek.it
+IdentityFile ~/.ssh/id_rsa
+ServerAliveInterval 240
+
+
+Host drivek7
+User drivek
+Port 33633
+HostName drivek7.drivek.it
+IdentityFile ~/.ssh/id_rsa
+ServerAliveInterval 240
+
+Host drivek8
+User drivek
+Port 33633
+HostName drivek8.drivek.it
+IdentityFile ~/.ssh/id_rsa
+ServerAliveInterval 240
+
+
+
+Host motork-prod
+User drivek
+Port 33633
+Hostname 213.32.72.25
+IdentityFile ~/.ssh/id_rsa
+ServerAliveInterval 240
+
+Host motork-stage
+User drivek
+#Port 33633
+Hostname 192.168.50.27
+#IdentityFile ~/.ssh/id_rsa
+ServerAliveInterval 240
+
