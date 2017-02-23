@@ -5,6 +5,8 @@
 
 export PATH="/Users/gianc/Dropbox/myScripts:$PATH"
 
+alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
+
 ## go to checkout folder
 co() { cd ~/Documents/git/$1 && gst }
 ## go to backup folder
