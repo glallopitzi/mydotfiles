@@ -5,38 +5,31 @@
 
 export PATH="/Users/gianc/Dropbox/myScripts:$PATH"
 
+## show my public ip address
 alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
+
+## show vbox running vms
+alias vboxlist="VBoxManage list runningvms"
 
 ## go to checkout folder
 co() { cd ~/Documents/git/$1 && gst }
 ## go to backup folder
 bck() { cd ~/Documents/git/bck/$1 && ls -ltrh }
 
-drmstart() { docker-machine start default; }
-drmrestart() { docker-machine restart default; }
-drmstop() { docker-machine stop default; }
-drmip() { docker-machine ip default; }
 
-dreval() { eval $(docker-machine env default) }
 
+## docker
 drstop() { docker stop $(docker ps -a -q); }
 drm() { docker rm $(docker ps -q -a); }
 dri() { docker rmi $(docker images -q); }
-
 
 
 #################################
 #################################
 ## DrivekK - related
 
-alias dk1="ssh drivek1"
-alias dk2="ssh drivek2"
-alias dk3="ssh drivek3"
-alias dk4="ssh drivek4"
-alias dk5="ssh drivek5"
-alias dk6="ssh drivek6"
-alias dk7="ssh drivek7"
-alias dk8="ssh drivek8"
+alias api01="ssh api01"
+alias api02="ssh api02"
 
 alias dkstage="ssh drivek@dkstage"
 alias dkapp="ssh drivek@dkapp"
@@ -45,6 +38,10 @@ alias dkdb="ssh drivek@dkdb"
 
 alias motork-prod="ssh motork-prod"
 alias motork-stage="ssh motork-stage"
+
+alias jenkins="ssh jenkins"
+
+alias dock02="ssh dock02"
 
 dektake () {
 	scp -i ~/.ssh/id_rsa drivek@drivek${1}:${2} .
